@@ -1,5 +1,3 @@
-package ch.fhnw.pizza.data.domain;
-
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,13 +7,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
+package ch.fhnw.pizza.data.domain;
+
+
 @Entity
 @Table(name = "car")
 public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Hidden //This annotation hides the id field from the swagger documentation
+    @Hidden //This annotation hides the id field from the swaggerdocumentation
     @Column(name = "car_id", nullable = false)
     private Long carId;
 
@@ -40,33 +41,85 @@ public class Car {
     @Column(name = "car_availability")
     private String carAvailability;
 
+
     
 
  //   @ManyToOne
  //   private Menu menu;
+ 
 
- //   public Long getId() {
- //       return id;
- //   }
+    public Long getCarId() {
+        return carId;
+    }
 
- //   public void setId(Long id) {
- //       this.id = id;
- //   }
+    public void setCarId(Long carId) {
+        this.carId = carId;
+    }
 
- //   public String getPizzaToppings() {
- //       return pizzaToppings;
- //   }
+    public String getCarBrand() {
+        return carBrand;
+    }
 
- //   public void setPizzaToppings(String pizzaToppings) {
- //       this.pizzaToppings = pizzaToppings;
- //   }
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
+    }
 
- //   public String getPizzaName() {
- //       return pizzaName;
- //   }
+    public String getCarModel() {
+        return carModel;
+    }
 
- //   public void setPizzaName(String pizzaName) {
- //       this.pizzaName = pizzaName;
- //   } 
-    
+    public void setCarModel(String carModel) {
+        this.carModel = carModel;
+    }
+
+    public Date getCarYear() {
+        return carYear;
+    }
+
+    public void setCarYear(Date carYear) {
+        this.carYear = carYear;
+    }
+
+    public String getCarColor() {
+        return carColor;
+    }
+
+    public void setCarColor(String carColor) {
+        this.carColor = carColor;
+    }
+
+    public String getCarLicensePlate() {
+        return carLicensePlate;
+    }
+
+    public void setCarLicensePlate(String carLicensePlate) {
+        this.carLicensePlate = carLicensePlate;
+    }
+
+    public Long getCarRentalRate() {
+        return carRentalRate;
+    }
+
+    public void setCarRentalRate(Long carRentalRate) {
+        this.carRentalRate = carRentalRate;
+    }
+
+    public String getCarAvailability() {
+        return carAvailability;
+    }
+
+    public void setCarAvailability(String carAvailability) {
+        this.carAvailability = carAvailability;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
